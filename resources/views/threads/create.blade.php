@@ -29,14 +29,14 @@
 
                             <div class="form-group">
                                 <label for="title">Title</label>
-                                <input type="text" class="form-control" id="title" name="title" value="{{old('title')}}" required>
+                                <input type="text" class="form-control" id="title" name="title" value="{{ old('title') }}" required>
                             </div>
                             <div class="form-group">
                                 <label for="body">Body:</label>
                                 <wysiwyg name="body"></wysiwyg>
                             </div>
                             <div class="form-group">
-                                <div class="g-recaptcha" data-sitekey="6LdnSp8UAAAAADK4GF_EhFtzdiDyMVGQXGJBwy0A"></div>
+                                <div class="g-recaptcha" data-sitekey="{{ config('council.recaptcha.key') }}"></div>
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary">Publish</button>
